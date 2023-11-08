@@ -1,0 +1,100 @@
+.container {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    background-color: rgb(185, 179, 179);
+}
+
+
+.word {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    
+}
+
+#esh{
+    top: 90px;
+    right: 300px;
+}
+
+#andyh{
+    top: 150px;
+    right: 300px;
+}
+
+#john {
+    top: 60px;
+    right: 360px;
+}
+
+#chuong {
+    top: 30px;
+    right: 390px;
+}
+
+.vertical{
+    flex-direction: column;
+}
+
+.horizontal{
+    flex-direction: row;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+
+.prompts {
+    display: flex;
+    flex-direction: column;
+}
+
+.prompt {
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.prompt-number {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.check-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.prompt{
+    position: relative;
+}
+
+.ques{
+    position: relative;
+}
+
+.word::after {
+    content: attr(num);
+    font-size: 10px;
+    color: black;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    right: 100px;
+    z-index: 1000000000000;
+}

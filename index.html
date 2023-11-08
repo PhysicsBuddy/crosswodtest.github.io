@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossword test</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="crossword">
+            <div class="word vertical" id="esh" data-word="esh" data-link="andyh" data-go-index="4" data-link-index="2"  num="1.">
+                <input class="cell" type="text" data-index="0" data-char="e">
+                <input class="cell" type="text" data-index="1" data-char="s">
+                <input class="cell" type="text" data-index="2" data-char="h" link="1" oninput="updateOtherInput(this)">
+            </div>
+            <div class="word horizontal" id="andyh" data-word="andyh" data-link="esh" data-go-index="2" data-link-index="4" data-link2="chuong" data-go-index2="4" data-link-index2="1" num="2.">
+                <input class="cell ques" num="2" type="text" data-index="0" data-char="a">
+                <input class="cell" type="text" data-index="1" data-char="n" link="2" oninput="updateOtherInput2(this)">
+                <input class="cell" type="text" data-index="2" data-char="d">
+                <input class="cell" type="text" data-index="3" data-char="y">
+                <input class="cell" type="text" data-index="4" data-char="h" link="1" oninput="updateOtherInput(this)">
+            </div>
+            <div class="word horizontal" id="john" data-word="john" data-link="chuong" data-go-index="1" data-link-index="2" num="3.">
+                <input class="cell ques" num="3" type="text" data-index="0" data-char="j">
+                <input class="cell" type="text" data-index="1" data-char="o">
+                <input class="cell" type="text" data-index="2" data-char="h"link="1" oninput="updateOtherInput(this)">
+                <input class="cell" type="text" data-index="3" data-char="n">
+            </div>
+            <div class="word vertical" id="chuong" data-word="chuong" data-link="andyh" data-go-index="1" data-link-index="4" data-link2="john" data-go-index2="2" data-link-index2="1" num="4.">
+                <input class="cell ques" num="4" type="text" data-index="0" data-char="c">
+                <input class="cell" type="text" data-index="1" data-char="h" link="2" oninput="updateOtherInput2(this)">
+                <input class="cell" type="text" data-index="2" data-char="u">
+                <input class="cell" type="text" data-index="3" data-char="o">
+                <input class="cell" type="text" data-index="4" data-char="n" link="1" oninput="updateOtherInput(this)">
+                <input class="cell" type="text" data-index="5" data-char="g">
+            </div>
+            <!-- Add more words with inputs for your crossword puzzle -->
+        </div>
+    </div>
+
+    <div class="prompts">
+        <div class="prompt" data-prompt-for="esh">
+            <span class="prompt-number">1.</span> A very handsome guy (ans: Esh)
+            <button class="check-button">Check</button>
+        </div>
+        <div class="prompt" data-prompt-for="andyh">
+            <span class="prompt-number">2.</span> A very big big guy (ans: AndyH)
+            <button class="check-button">Check</button>
+        </div>
+        <div class="prompt" data-prompt-for="john">
+            <span class="prompt-number">3.</span> MIT mate
+            <button class="check-button">Check</button>
+        </div>
+        <div class="prompt" data-prompt-for="chuong">
+            <span class="prompt-number">3.</span> Mango
+            <button class="check-button">Check</button>
+        </div>
+        <!-- Add more prompts and check buttons for other words -->
+    </div>
+
+    <div id="message"></div>
+    <script src="script.js"></script>
+</body>
+</html>
