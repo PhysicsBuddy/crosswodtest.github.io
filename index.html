@@ -7,59 +7,106 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div id="crossword">
-            <div class="word vertical" id="esh" data-word="esh" data-link="andyh" data-go-index="4" data-link-index="2"  num="1.">
-                <input class="cell" type="text" data-index="0" data-char="e">
-                <input class="cell" type="text" data-index="1" data-char="s">
-                <input class="cell" type="text" data-index="2" data-char="h" link="1" oninput="updateOtherInput(this)">
-            </div>
-            <div class="word horizontal" id="andyh" data-word="andyh" data-link="esh" data-go-index="2" data-link-index="4" data-link2="chuong" data-go-index2="4" data-link-index2="1" num="2.">
-                <input class="cell ques" num="2" type="text" data-index="0" data-char="a">
-                <input class="cell" type="text" data-index="1" data-char="n" link="2" oninput="updateOtherInput2(this)">
-                <input class="cell" type="text" data-index="2" data-char="d">
-                <input class="cell" type="text" data-index="3" data-char="y">
-                <input class="cell" type="text" data-index="4" data-char="h" link="1" oninput="updateOtherInput(this)">
-            </div>
-            <div class="word horizontal" id="john" data-word="john" data-link="chuong" data-go-index="1" data-link-index="2" num="3.">
-                <input class="cell ques" num="3" type="text" data-index="0" data-char="j">
-                <input class="cell" type="text" data-index="1" data-char="o">
-                <input class="cell" type="text" data-index="2" data-char="h"link="1" oninput="updateOtherInput(this)">
-                <input class="cell" type="text" data-index="3" data-char="n">
-            </div>
-            <div class="word vertical" id="chuong" data-word="chuong" data-link="andyh" data-go-index="1" data-link-index="4" data-link2="john" data-go-index2="2" data-link-index2="1" num="4.">
-                <input class="cell ques" num="4" type="text" data-index="0" data-char="c">
-                <input class="cell" type="text" data-index="1" data-char="h" link="2" oninput="updateOtherInput2(this)">
-                <input class="cell" type="text" data-index="2" data-char="u">
-                <input class="cell" type="text" data-index="3" data-char="o">
-                <input class="cell" type="text" data-index="4" data-char="n" link="1" oninput="updateOtherInput(this)">
-                <input class="cell" type="text" data-index="5" data-char="g">
-            </div>
-            <!-- Add more words with inputs for your crossword puzzle -->
+    <div class="start_btn">
+        <button>Start Quiz</button>
+    </div>
+
+    <div class="info_box">
+        <div class="info-title"><span>Some Rules of this competition</span></div>
+        <div class="infolist">
+            <div class="info">test test test test test test test test test test test test test</div>
+            <div class="info">test test test test test test test test test test test test test</div>
+            <div class="info">test test test test test test test test test test test test test</div>
+            <div class="info">test test test test test test test test test test test test test</div>
+            <div class="info">test test test test test test test test test test test test test</div>
+            <div class="info">test test test test test test test test test test test test test</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button>
+            <button class="restart">Continue</button>
         </div>
     </div>
 
-    <div class="prompts">
-        <div class="prompt" data-prompt-for="esh">
-            <span class="prompt-number">1.</span> A very handsome guy (ans: Esh)
-            <button class="check-button">Check</button>
+    <section class="container">
+        <div class="header">
+            <h1>AISVN Logic Math Competition</h1>
         </div>
-        <div class="prompt" data-prompt-for="andyh">
-            <span class="prompt-number">2.</span> A very big big guy (ans: AndyH)
-            <button class="check-button">Check</button>
+        <div class="main-frame">
+            <div class="grid-frame">
+                <div class="crossword">
+                    <div class="word vertical" id="103" self-word="103" go-word="23453" go-link-index="4" self-link-index="2"  num="1." 
+                    x="6"  y="3">
+                        <input class="cell" type="text" data-index="0" data-char="1">
+                        <input class="cell" type="text" data-index="1" data-char="0">
+                        <input class="cell" type="text" data-index="2" data-char="3" link="1" oninput="updateOtherInput(this)">
+                    </div>
+                    <div class="word horizontal"  self-word="23453" go-word="103" go-link-index="2" self-link-index="4" go-word2="235136" go-link-index2="4" self-link-index2="1" num="2."
+                    x="2"  y="5">
+                        <input class="cell ques" num="2" type="text" data-index="0" data-char="2">
+                        <input class="cell" type="text" data-index="1" data-char="3" link="2" oninput="updateOtherInput2(this)">
+                        <input class="cell" type="text" data-index="2" data-char="4">
+                        <input class="cell" type="text" data-index="3" data-char="5">
+                        <input class="cell" type="text" data-index="4" data-char="3" link="1" oninput="updateOtherInput(this)">
+                    </div>
+                    <div class="word horizontal"  id="1333" self-word="1333" go-word="235136" go-link-index="1" self-link-index="2" num="3."
+                    x="1"  y="2">
+                        <input class="cell ques" num="3" type="text" data-index="0" data-char="1">
+                        <input class="cell" type="text" data-index="1" data-char="3">
+                        <input class="cell" type="text" data-index="2" data-char="3"link="1" oninput="updateOtherInput(this)">
+                        <input class="cell" type="text" data-index="3" data-char="3">
+                    </div>
+                    <div class="word vertical" self-word="235136" go-word="23453" go-link-index="1" self-link-index="4" go-word2="1333" go-link-index2="2" self-link-index2="1" num="4."
+                    x="3"  y="1">
+                        <input class="cell ques" num="4" type="text" data-index="0" data-char="2">
+                        <input class="cell" type="text" data-index="1" data-char="3" link="2" oninput="updateOtherInput2(this)">
+                        <input class="cell" type="text" data-index="2" data-char="5">
+                        <input class="cell" type="text" data-index="3" data-char="1">
+                        <input class="cell" type="text" data-index="4" data-char="3" link="1" oninput="updateOtherInput(this)">
+                        <input class="cell" type="text" data-index="5" data-char="6">
+                    </div>
+                    <!-- Add more words with inputs for your crossword puzzle -->
+                </div>
+            </div>
+            <div class="question-frame">
+                <h2>Across</h2>
+                <div class="prompts">
+                    <div class="prompt" data-prompt-for="23453">
+                        <p><span class="prompt-number">2.</span> 23452 + 1 = ?</p>
+                        <button class="check-button"><span id="trials">Check (Trials-left: 3)</span></p></button>
+                    </div>
+                    <div class="prompt" data-prompt-for="1333">
+                        <span class="prompt-number">3.</span> 
+                        <p>1330 + 3 = ?</p>
+                        <button class="check-button"><span id="trials">Check (Trials-left: 3)</span></p></button>
+                    </div>
+                </div>
+            </div>
+            <div class="question-frame">
+                <h2>Down</h2>
+                <div class="prompts">
+                    <div class="prompt" data-prompt-for="103">
+                        <span class="prompt-number">1.</span> 
+                        <p>100 + 3 = ?</p>
+                        <button class="check-button"><span id="trials">Check (Trials-left: 3)</span></p></button>
+                    </div>
+                    <div class="prompt" data-prompt-for="235136">
+                        <span class="prompt-number">4.</span> 
+                        <p>235131 + 5 = ?</p>
+                        <button class="check-button"><span id="trials">Check (Trials-left: 3)</span></p></button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="prompt" data-prompt-for="john">
-            <span class="prompt-number">3.</span> MIT mate
-            <button class="check-button">Check</button>
+        <div class="task-bar">
+            <div class="point">
+                <p>Point: <span id="point">0</span></p>
+            </div>
+            <div class="timer">
+                <p>Time: <span id="timer">40:00</span></p>
+            </div>
         </div>
-        <div class="prompt" data-prompt-for="chuong">
-            <span class="prompt-number">3.</span> Mango
-            <button class="check-button">Check</button>
-        </div>
-        <!-- Add more prompts and check buttons for other words -->
-    </div>
-
-    <div id="message"></div>
+    </section>
+    
     <script src="script.js"></script>
 </body>
 </html>

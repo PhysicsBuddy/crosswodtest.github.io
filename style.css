@@ -1,36 +1,26 @@
-.container {
-    width: 600px;
-    height: 600px;
-    position: relative;
-    background-color: rgb(185, 179, 179);
+body{
+    background: #007DC5;
 }
 
+.container {
+    width: 90%;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.crossword {
+    width: 675px;
+    height: 675px;
+    position: relative;
+    background-color: blue;
+}
 
 .word {
     display: flex;
     flex-wrap: wrap;
     position: absolute;
-    
-}
-
-#esh{
-    top: 90px;
-    right: 300px;
-}
-
-#andyh{
-    top: 150px;
-    right: 300px;
-}
-
-#john {
-    top: 60px;
-    right: 360px;
-}
-
-#chuong {
-    top: 30px;
-    right: 390px;
 }
 
 .vertical{
@@ -42,8 +32,8 @@
 }
 
 .cell {
-    width: 30px;
-    height: 30px;
+    width:45px;
+    height: 45px;
     text-align: center;
     font-size: 20px;
     border: 1px solid #000;
@@ -56,12 +46,6 @@
     flex-direction: column;
 }
 
-.prompt {
-    margin: 5px;
-    display: flex;
-    align-items: center;
-}
-
 .prompt-number {
     font-weight: bold;
     margin-right: 5px;
@@ -71,17 +55,29 @@
     background-color: #4CAF50;
     color: white;
     border: none;
-    padding: 5px 10px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
     cursor: pointer;
+    border-radius: 5px;
 }
+
 
 .prompt{
     position: relative;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.prompt p{
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 8px;
 }
 
 .ques{
@@ -90,11 +86,208 @@
 
 .word::after {
     content: attr(num);
-    font-size: 10px;
+    font-size: 12px;
     color: black;
     position: absolute;
     top: 1px;
     left: 2px;
     right: 100px;
     z-index: 1000000000000;
+}
+
+/* -----------log in screen----------------- */
+.start_btn,
+.info_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),
+                0 6px 20px 0 rgba(0,0,0,0.19);
+    z-index: 0;
+}
+
+.info_box.activeInfo,
+.container.activeContainer{
+    opacity: 1;
+    z-index: 5;
+    pointer-events: auto;
+}
+
+.start_btn.inactive{
+    display: none;
+}
+
+.info_box.activeInfo{
+    transition: translate(-50%, -50%) scale(1);
+}
+
+
+.start_btn button{
+    font-size: 25px;
+    font-weight: 500;
+    color: #007DC5;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.info_box{
+    width: 540px;
+    background: #fff;
+    border-radius: 5px;
+    transform: translate(-50%, -50%) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3 ease;
+}
+
+.info_box .info-title{
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-radius: 5px 5px 0 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.info_box .info-list{
+    padding: 15px 30px;
+}
+
+.info_box .info-list .info{
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+.info_box .info-list .info span{
+    font-weight: 600;
+    color: #007bff;
+}
+.info_box .buttons{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 30px;
+    border-top: 1px solid lightgrey;
+}
+
+.info_box .buttons button{
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #007bff;
+    transition: all 0.3s ease;
+}
+
+.container{
+    width: fit-content;
+    padding: 20px 20px;
+    background: #fff;
+    border-radius: 15px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.container header{
+    position: relative;
+    z-index: 2;
+    padding: 0 30px;
+    background: #fff;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 5px 1px rgba(0,0,0,0.1);
+}
+
+.container .header h1{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* ---------------interface------------------------ */
+
+.main-frame {
+    display: flex;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    flex-direction: row;
+    padding: 20px 40px;
+    background-color: white;
+}
+
+.question-frame {
+    width: 450px; 
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-left: 20px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+}
+
+.question-sections h2 {
+    margin-bottom: 10px;
+}
+
+.task-bar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer{
+    font-size: 30px;
+    font-weight: 600;
+    width: fit-content;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 10px;
+    border: black 4px solid;
+    border-radius: 5px;
+    margin: 0 20px;
+}
+
+.timer span, .point span {
+    color: red;
+}
+
+.point{
+    font-size: 30px;
+    font-weight: 600;
+    width: fit-content;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 10px;
+    border: black 4px solid;
+    border-radius: 5px;
+    margin: 0 20px;
+}
+
+.timer span {
+    color: red;
 }
