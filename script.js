@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", function() {
     words.forEach(word => {
         const x = parseInt(word.getAttribute('x'));
         const y = parseInt(word.getAttribute('y'));
-        const cellWidth = 30; // Adjust this value according to your cell width
+        const cellWidth = 35; // Adjust this value according to your cell width
         const cellOffset = 1; // Offset for starting point
 
         const leftPosition = (x - cellOffset) * cellWidth;
